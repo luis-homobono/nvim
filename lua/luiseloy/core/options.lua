@@ -37,3 +37,6 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- folding
+-- vim.opt.foldlevel = 99
+opt.wrap = true -- enable line warp
