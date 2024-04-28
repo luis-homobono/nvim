@@ -23,6 +23,6 @@ keymap.set("n", "<S-l>", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 -- general keys
-keymap.set({ "n", "i", "x", "s" }, "<C-s>", "<cmd>:w<CR>", { desc = "Save file" })
+keymap.set({ "n", "i", "x", "s" }, "<C-s>", "<cmd>:w<CR><ESC><ESC>", { desc = "Save file" })
 keymap.set("n", "<leader>L", "<cmd>:Lazy<CR>", { desc = "Enter Lazy manager" })
 keymap.set("n", "<leader>qq", "<cmd>:q<CR>", { desc = "Exit nvim" })
