@@ -1,4 +1,5 @@
 return {
+  -- display popup for help keys
   "folke/which-key.nvim",
   event = "VeryLazy", -- this is load before don't important for UI
   init = function()

@@ -1,4 +1,5 @@
 return {
+  -- dashboard for nvim
   "goolord/alpha-nvim",
   event = "VimEnter",
   config = function()

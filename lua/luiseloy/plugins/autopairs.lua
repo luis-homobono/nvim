@@ -1,4 +1,5 @@
 return {
+  -- autopair syntax corrector
   "windwp/nvim-autopairs",
   event = { "InsertEnter" },
   dependencies = {

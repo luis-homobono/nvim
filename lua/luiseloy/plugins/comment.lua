@@ -1,4 +1,5 @@
 return {
+  -- comment for languages 
   "numToStr/Comment.nvim",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {

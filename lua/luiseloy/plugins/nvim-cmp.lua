@@ -1,4 +1,5 @@
 return {
+  -- completion engine
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
