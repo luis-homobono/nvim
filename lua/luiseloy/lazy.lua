@@ -12,8 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("luiseloy.plugins", {
+  -- check for updates
+  checker = {
+    enable = true,
+    notify = false,
+  },
   -- disable notify for changes
   change_detection = {
     notify = false,
-  }
+  },
 })
