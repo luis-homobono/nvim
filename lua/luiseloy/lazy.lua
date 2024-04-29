@@ -11,10 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("luiseloy.plugins", {
+require("lazy").setup({ { import = "luiseloy.plugins" }, { import = "luiseloy.plugins.lsp" } }, {
   -- check for updates
-  checker = {
-    enable = true,
+  checker = { enable = true,
     notify = false,
   },
   -- disable notify for changes
