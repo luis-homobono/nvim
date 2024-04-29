@@ -36,20 +36,20 @@ return {
         "lua_ls",
         -- "prismals",
         "pyright", -- python
-				"eslint", -- js
-				"angularls", -- angular
-				"bashls", -- bash
-				"dockerls", -- docker
+        "eslint", -- js
+        "angularls", -- angular
+        "bashls", -- bash
+        "dockerls", -- docker
         "emmet_ls", -- emmet
-				-- "gopls", -- go
-				"jsonls", -- json
-				-- "jinja_lsp", -- jinja, rust
-				"remark_ls",
-				-- "intelephense", -- php
-				"pyright", -- "pylyzer", "jedi_language_server", "pylsp"
-				-- "r_language_server", -- r
-				"sqlls", -- sql
-				"typos_lsp", -- all
+        -- "gopls", -- go
+        "jsonls", -- json
+        -- "jinja_lsp", -- jinja, rust
+        "remark_ls",
+        -- "intelephense", -- php
+        "pyright", -- "pylyzer", "jedi_language_server", "pylsp"
+        -- "r_language_server", -- r
+        "sqlls", -- sql
+        "typos_lsp", -- all
       },
     })
 
@@ -59,6 +59,8 @@ return {
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
+        "pylint",
+        "eslint_d",
       },
     })
   end,
