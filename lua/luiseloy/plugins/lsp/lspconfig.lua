@@ -116,13 +116,19 @@ return {
       end,
       ["pyright"] = function()
         -- configure angularls language server
-        lspconfig["pyright"].setup({})
+        lspconfig["pyright"].setup({
+          capabilities = capabilities,
+        })
       end,
       ["sqlls"] = function()
-			  lspconfig["sqlls"].setup({})
+        lspconfig["sqlls"].setup({
+          capabilities = capabilities,
+        })
       end,
       ["tsserver"] = function()
-			  lspconfig["tsserver"].setup({})
+        lspconfig["tsserver"].setup({
+          capabilities = capabilities,
+        })
       end,
     })
   end,
