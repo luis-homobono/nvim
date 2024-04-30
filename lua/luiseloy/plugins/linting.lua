@@ -1,4 +1,5 @@
 return {
+  -- linting for code
   "mfussenegger/nvim-lint",
   event = { "BufReadPre", "BufNewFile" },
   config = function()

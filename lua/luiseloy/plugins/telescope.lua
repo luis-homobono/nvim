@@ -11,6 +11,7 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
+    local builtin = require("telescope.builtin")
 
     telescope.setup({
       defaults = {
@@ -36,5 +37,15 @@ return {
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
     keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
     keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+    keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
+    keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
+    -- Git telescope maps
+    keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Git files" })
+    keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Show git commits" })
+    keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Show git branches" })
+    keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Show git status with diff" })
+    keymap.set("n", "<leader>gst", builtin.git_stash, { desc = "Show files in stash" })
+    -- Treesitter integration
+    keymap.set("n", "<leader>ts", builtin.treesitter, { desc = "List functions and variables" })
   end,
 }
