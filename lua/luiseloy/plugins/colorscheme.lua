@@ -1,7 +1,8 @@
 return {
   -- color scheme 
   "folke/tokyonight.nvim",
-  priority = 1000,
+  lazy=false, -- make sure we load this during startup
+  priority = 1000, -- load this before all other start plugins
   config = function()
     -- change color
     local bg = "#011628"

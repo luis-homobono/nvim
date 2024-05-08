@@ -1,3 +1,4 @@
+-- set lazy path for plugin
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -9,6 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+-- add runtimepaht
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "luiseloy.plugins" }, { import = "luiseloy.plugins.lsp" } }, {

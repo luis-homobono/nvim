@@ -31,6 +31,7 @@ return {
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
 
+    -- File manager
     keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
@@ -44,7 +45,7 @@ return {
     keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Show git commits" })
     keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Show git branches" })
     keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Show git status with diff" })
-    keymap.set("n", "<leader>gst", builtin.git_stash, { desc = "Show files in stash" })
+    keymap.set("n", "<leader>gt", builtin.git_stash, { desc = "Show files in stash" })
     -- Treesitter integration
     keymap.set("n", "<leader>ts", builtin.treesitter, { desc = "List functions and variables" })
   end,

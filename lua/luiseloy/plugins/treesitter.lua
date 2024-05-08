@@ -1,10 +1,12 @@
 return {
   -- syntax highlighting, indentation, autotagging for very languages
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
+  -- event = { "BufReadPre", "BufNewFile", ""},
+  event = { "VeryLazy" },
   build = ":TSUpdate",
   dependencies = {
     "windwp/nvim-ts-autotag",
+    "nvim-treesitter/nvim-treesitter-textobjects",
   },
   config = function()
     -- import nvim-treesitter plugin
@@ -34,7 +36,6 @@ return {
         "prisma",
         "markdown",
         "markdown_inline",
-        -- "svelte",
         -- "graphql",
         "bash",
         "lua",
@@ -50,7 +51,7 @@ return {
         "toml",
         "dockerfile",
       },
-      -- 
+      -- keymaps
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -58,6 +59,20 @@ return {
           node_incremental = "<C-space>",
           scope_incremental = false,
           node_decremental = "<bs>",
+        },
+      },
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+            ["ac"] = "@conditional.outer",
+            ["ic"] = "@conditional.inner",
+            ["al"] = "@loop.outer",
+            ["il"] = "@loop.inner",
+          },
         },
       },
     })
