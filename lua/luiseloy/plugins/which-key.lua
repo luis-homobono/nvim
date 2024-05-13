@@ -14,6 +14,8 @@ return {
       f = { name = "Files and buffers manager" },
       g = { name = "Git manager" },
       G = { name = "Git integration" },
+      h = { name = "Git blame" },
+      q = { name = "Quit" },
       s = { name = "Splits manager" },
       t = { name = "Tabs manager" },
       w = { name = "Session manager" },

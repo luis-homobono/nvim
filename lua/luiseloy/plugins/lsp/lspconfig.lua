@@ -3,6 +3,7 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
+    "williamboman/mason.nvim", -- detect mason
     "hrsh7th/cmp-nvim-lsp", -- integrate autocompletion
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "folke/neodev.nvim", opts = {} },

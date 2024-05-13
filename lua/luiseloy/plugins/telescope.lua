@@ -4,6 +4,7 @@ return {
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope-file-browser.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
     "folke/todo-comments.nvim",
@@ -48,5 +49,9 @@ return {
     keymap.set("n", "<leader>gt", builtin.git_stash, { desc = "Show files in stash" })
     -- Treesitter integration
     keymap.set("n", "<leader>ts", builtin.treesitter, { desc = "List functions and variables" })
+    -- File browser linux
+    keymap.set("n", "<leader>fl", function()
+      telescope.extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
+    end, { desc = "Telescope file browser" })
   end,
 }
